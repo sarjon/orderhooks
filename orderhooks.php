@@ -68,10 +68,6 @@ class OrderHooks extends Module
 
     public function hookDisplayAdminOrderTabShip(array $params)
     {
-        $this->context->smarty->assign([
-            'order_id' => $params['id_order'],
-        ]);
-
         return $this->context->smarty->fetch($this->getLocalPath().'views/templates/displayAdminOrderTabShip.tpl');
     }
 
@@ -82,10 +78,6 @@ class OrderHooks extends Module
 
     public function hookDisplayAdminOrderTabOrder(array $params)
     {
-        $this->context->smarty->assign([
-            'order_id' => $params['id_order'],
-        ]);
-
         return $this->context->smarty->fetch($this->getLocalPath().'views/templates/displayAdminOrderTabOrder.tpl');
     }
 
